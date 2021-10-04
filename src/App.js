@@ -1,24 +1,47 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import AllCourse from './components/AllCourse/AllCourse';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import NotFound from './components/NotFound/NotFound';
+import Home from './components/Home/Home';
+import Resources from './components/Resources/Resources';
+import React, { createContext } from 'react';
+
+
+
+export const TextContext = createContext('')
 
 function App() {
+
+  //create dynamic text
+  const discoutText = "Click Here Get 60% discount"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header></Header>
+      <Switch>
+        {/* Use Contex Api */}
+        {/* <TextContext.Provider value={discoutText}> */}
+        <Route exact path="/courses">
+          <AllCourse></AllCourse>
+        </Route>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route exact path="/home">
+          <Home></Home>
+        </Route>
+        <Route exact path="/resources">
+          <Resources></Resources>
+        </Route>
+        <Route path="/*">
+          <NotFound></NotFound>
+        </Route>
+        {/* </TextContext.Provider> */}
+      </Switch>
+      <Footer></Footer>
+    </Router>
   );
 }
 
