@@ -18,3 +18,34 @@
     border-radius: 2px;
     padding: 5px 25px ;
 }
+
+.cart{
+    border-radius: 5px;
+    
+}
+.section{
+    width:100%;
+    display:block;
+   
+}
+.most-popular{
+    margin-top: 10px;
+   
+}
+
+.next{
+    background-color: #0091c7;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 40px;
+    color: white;
+
+}
+
+.input-box{
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+.language {
+    margin-top: 20px;
+}

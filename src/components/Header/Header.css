@@ -1,21 +1,19 @@
 .header-section{
     text-decoration: none;
     color: white;
+    font-size: 20px;
+    padding-right: 10px;
 }
-.dropdown{
-    margin-left: 8px;
-}
-   
+ 
 .logo{
-    padding-left: 10px;
+ 
     font-weight: 600;
-    color: white;
-    font-size: 40px;
+    color: #0091c7;
+    font-size: 30px;
+    text-decoration: none;
 }
 .header-text{
-    padding-right: 10px;
     color: white;
-    margin-right: 20px;
 }
 .nav{
    border-bottom: 1px solid rgba(128, 128, 128, 0.165);
@@ -28,4 +26,7 @@
     border: #0091c7;
     border-radius: 2px;
     padding: 5px 25px ;
+}
+.header-text{
+    justify-content: end;
 }

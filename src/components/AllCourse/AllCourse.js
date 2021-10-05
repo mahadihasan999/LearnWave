@@ -20,14 +20,16 @@ const AllCourse = () => {
 
 
     return (
+
         <div className="container all-info">
+            <h3 className="text-center">All Courses</h3>
             <div className="row">
                 {course?.map(course =>
-                    <div className="col-md-3">
+                    <div className="col-md-3 py-3">
                         <div className="cart">
                             <div className="p-3">
                                 <img src={course.image} alt="" height="150px" width="250px" />
-                                <h4>{course.name.slice(0, 15)}</h4>
+                                <h4>{course.name.slice(0, 18)}</h4>
                                 <p>{course.mentor}</p>
                                 <div className="d-flex justify-content-around">
                                     <p>{element} {course.duration}</p>
